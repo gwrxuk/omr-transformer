@@ -97,6 +97,15 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q      # 57 tests
 `predict` writes `<name>.tokens.txt`, `<name>.musicxml` (opens in MuseScore)
 and `<name>.mid`.
 
+## Real engravings (OpenScore Lieder)
+
+On 37 vocal-line excerpts from the CC0 [OpenScore Lieder Corpus](https://github.com/OpenScore/Lieder),
+engraved with MuseScore 4, the symbol error rate is **73.6%** (synthetic test:
+2.8%). Clefs (37/37) and key signatures (34/37) transfer; time signatures do
+not (the model outputs 3/8 every time), and the decoder then forces barlines and
+durations to fit that wrong metre. Method, per-excerpt results and sources:
+[docs/openscore_test/](docs/openscore_test/README.md).
+
 ## Out-of-domain check on a real score
 
 Run on six staves cropped from the first page of Holst's *Mars* (public-domain
