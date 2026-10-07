@@ -1,0 +1,31 @@
+{
+  "checkpoint": "runs/real_ft/best.pt",
+  "step": 3000,
+  "decoding": "greedy",
+  "test_clean": {
+    "samples": 1000,
+    "SER": 0.018035465714458635,
+    "pitch_ER": 0.0157961629244084,
+    "duration_ER": 0.007444168734491315,
+    "sequence_acc": 0.772
+  },
+  "test_scan": {
+    "samples": 1000,
+    "SER": 0.05241178962658113,
+    "pitch_ER": 0.045512316165345276,
+    "duration_ER": 0.02057737698965079,
+    "sequence_acc": 0.641
+  },
+  "top_confusions": [
+    "note-Fb4_quarter -> note-F4_quarter (7)",
+    "note-Fb5_sixteenth -> note-F5_sixteenth (6)",
+    "note-C#4_half. -> note-C4_half. (6)",
+    "note-G#2_half -> note-G2_half (6)",
+    "note-Fb5_quarter. -> note-F5_quarter. (5)",
+    "note-G#2_quarter. -> note-G2_quarter. (5)",
+    "note-Ab5_half -> note-A5_half (5)",
+    "note-E#2_sixteenth -> note-Eb2_sixteenth (5)",
+    "note-C#2_eighth. -> note-C2_eighth. (5)",
+    "note-F#4_half. -> note-F4_half. (4)"
+  ]
+}

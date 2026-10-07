@@ -20,7 +20,7 @@ os.environ.setdefault("PYTORCH_MPS_LOW_WATERMARK_RATIO", "0.5")
 import torch  # noqa: E402
 from torch.utils.data import DataLoader
 
-from .data import PrimusDataset, SyntheticStaves, collate
+from .data import Mixed, PrimusDataset, RenderedStaves, SyntheticStaves, collate
 from .metrics import Scores
 from .model import OMRTransformer
 from .vocab import Vocab
@@ -86,6 +86,8 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--init", default=None, help="checkpoint to start from")
     ap.add_argument("--fixed-width", type=int, default=1024, help="pad every batch to this width (0 = buckets)")
     ap.add_argument("--fixed-len", type=int, default=40, help="pad every target to this length (0 = buckets)")
+    ap.add_argument("--real-root", default=None, help="mix in real engravings (scripts/build_openscore_data.py)")
+    ap.add_argument("--real-frac", type=float, default=0.5, help="share of training samples drawn from --real-root")
     args = ap.parse_args(argv)
 
     torch.manual_seed(args.seed)
@@ -105,6 +107,11 @@ def main(argv: list[str] | None = None) -> None:
         train_ds = SyntheticStaves(vocab, "train", args.steps * args.batch, tuple(args.degrade))
         val_sets = {"val_clean": SyntheticStaves(vocab, "val", args.val_size, 0.0),
                     "val_scan": SyntheticStaves(vocab, "val", args.val_size, 1.0)}
+        if args.real_root:
+            real = RenderedStaves(vocab, args.real_root, "train", tuple(args.degrade))
+            train_ds = Mixed(real, train_ds, args.real_frac, args.steps * args.batch)
+            val_sets["val_real"] = RenderedStaves(vocab, args.real_root, "val", 0.0)
+            print(f"real engravings: {len(real)} train, {len(val_sets['val_real'])} val", flush=True)
 
     coll = partial(collate, pad_id=vocab.pad, fixed_w=args.fixed_width or None,
                    fixed_l=args.fixed_len or None)
@@ -161,7 +168,7 @@ def main(argv: list[str] | None = None) -> None:
                                      f"{r['duration_ER']:.4f}", f"{r['sequence_acc']:.4f}", "",
                                      f"{time.time() - t0:.0f}"])
                 log.flush()
-                key = "val_scan" if "val_scan" in results else "val"
+                key = next(k for k in ("val_real", "val_scan", "val") if k in results)
                 ckpt = {"model": model.state_dict(), "step": step, "args": vars(args),
                         "val": results}
                 torch.save(ckpt, out / "last.pt")

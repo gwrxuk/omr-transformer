@@ -1,0 +1,87 @@
+real engravings: 5327 train, 234 val
+device=mps params=8.58M vocab=723
+step    50  loss 2.571  lr 5.00e-05  49s  gpu 9.6GB
+step   100  loss 2.119  lr 1.00e-04  87s  gpu 9.6GB
+step   150  loss 1.827  lr 1.50e-04  126s  gpu 9.6GB
+step   200  loss 1.685  lr 2.00e-04  174s  gpu 9.6GB
+step   250  loss 1.612  lr 2.00e-04  221s  gpu 9.8GB
+step   300  loss 1.559  lr 1.99e-04  265s  gpu 9.6GB
+step   350  loss 1.507  lr 1.99e-04  344s  gpu 9.6GB
+step   400  loss 1.485  lr 1.98e-04  381s  gpu 9.6GB
+step   450  loss 1.455  lr 1.96e-04  421s  gpu 9.6GB
+step   500  loss 1.443  lr 1.95e-04  1229s  gpu 9.8GB
+  [val_clean] loss=0.2706  SER=0.0475  pitch_ER=0.0415  duration_ER=0.0228  sequence_acc=0.5234
+  [val_scan] loss=0.4417  SER=0.1033  pitch_ER=0.0899  duration_ER=0.0532  sequence_acc=0.3867
+  [val_real] loss=0.3937  SER=0.0939  pitch_ER=0.0822  duration_ER=0.0614  sequence_acc=0.3590
+  saved best (val_real SER 0.0939)
+step   550  loss 1.435  lr 1.93e-04  1293s  gpu 9.8GB
+step   600  loss 1.420  lr 1.91e-04  1327s  gpu 10.0GB
+step   650  loss 1.403  lr 1.88e-04  1363s  gpu 9.8GB
+step   700  loss 1.394  lr 1.85e-04  2919s  gpu 9.6GB
+step   750  loss 1.386  lr 1.83e-04  2956s  gpu 9.8GB
+step   800  loss 1.375  lr 1.79e-04  2995s  gpu 9.7GB
+step   850  loss 1.362  lr 1.76e-04  3038s  gpu 9.6GB
+step   900  loss 1.360  lr 1.72e-04  3078s  gpu 9.6GB
+step   950  loss 1.351  lr 1.68e-04  3121s  gpu 9.7GB
+step  1000  loss 1.342  lr 1.64e-04  3169s  gpu 9.6GB
+  [val_clean] loss=0.2342  SER=0.0376  pitch_ER=0.0321  duration_ER=0.0192  sequence_acc=0.6289
+  [val_scan] loss=0.3773  SER=0.0813  pitch_ER=0.0676  duration_ER=0.0393  sequence_acc=0.4727
+  [val_real] loss=0.2763  SER=0.0626  pitch_ER=0.0564  duration_ER=0.0320  sequence_acc=0.5470
+  saved best (val_real SER 0.0626)
+step  1050  loss 1.342  lr 1.60e-04  3241s  gpu 9.6GB
+step  1100  loss 1.329  lr 1.56e-04  3290s  gpu 9.6GB
+step  1150  loss 1.319  lr 1.51e-04  3337s  gpu 9.6GB
+step  1200  loss 1.309  lr 1.46e-04  3386s  gpu 9.6GB
+step  1250  loss 1.297  lr 1.41e-04  3436s  gpu 9.6GB
+step  1300  loss 1.298  lr 1.36e-04  3506s  gpu 9.6GB
+step  1350  loss 1.296  lr 1.31e-04  3561s  gpu 9.9GB
+step  1400  loss 1.285  lr 1.26e-04  3615s  gpu 9.7GB
+step  1450  loss 1.274  lr 1.21e-04  3666s  gpu 9.6GB
+step  1500  loss 1.266  lr 1.16e-04  3716s  gpu 9.6GB
+  [val_clean] loss=0.2168  SER=0.0328  pitch_ER=0.0271  duration_ER=0.0182  sequence_acc=0.6836
+  [val_scan] loss=0.3423  SER=0.0729  pitch_ER=0.0602  duration_ER=0.0355  sequence_acc=0.5312
+  [val_real] loss=0.2550  SER=0.0447  pitch_ER=0.0413  duration_ER=0.0287  sequence_acc=0.5855
+  saved best (val_real SER 0.0447)
+step  1550  loss 1.265  lr 1.10e-04  3790s  gpu 9.8GB
+step  1600  loss 1.262  lr 1.05e-04  3839s  gpu 9.6GB
+step  1650  loss 1.258  lr 9.98e-05  3886s  gpu 9.6GB
+step  1700  loss 1.251  lr 9.45e-05  3937s  gpu 9.6GB
+step  1750  loss 1.247  lr 8.92e-05  3994s  gpu 9.7GB
+step  1800  loss 1.243  lr 8.40e-05  4049s  gpu 9.7GB
+step  1850  loss 1.232  lr 7.88e-05  4101s  gpu 9.6GB
+step  1900  loss 1.234  lr 7.37e-05  4155s  gpu 9.7GB
+step  1950  loss 1.228  lr 6.87e-05  4214s  gpu 9.7GB
+step  2000  loss 1.226  lr 6.39e-05  4273s  gpu 9.6GB
+  [val_clean] loss=0.1915  SER=0.0223  pitch_ER=0.0173  duration_ER=0.0117  sequence_acc=0.7539
+  [val_scan] loss=0.3051  SER=0.0566  pitch_ER=0.0460  duration_ER=0.0283  sequence_acc=0.6172
+  [val_real] loss=0.1781  SER=0.0284  pitch_ER=0.0253  duration_ER=0.0136  sequence_acc=0.7308
+  saved best (val_real SER 0.0284)
+step  2050  loss 1.226  lr 5.91e-05  4365s  gpu 8.7GB
+step  2100  loss 1.226  lr 5.45e-05  4426s  gpu 8.6GB
+step  2150  loss 1.217  lr 5.01e-05  4481s  gpu 8.6GB
+step  2200  loss 1.207  lr 4.59e-05  4535s  gpu 8.7GB
+step  2250  loss 1.207  lr 4.18e-05  4603s  gpu 8.6GB
+step  2300  loss 1.206  lr 3.79e-05  4669s  gpu 8.6GB
+step  2350  loss 1.199  lr 3.42e-05  4730s  gpu 8.6GB
+step  2400  loss 1.202  lr 3.08e-05  4787s  gpu 8.7GB
+step  2450  loss 1.199  lr 2.76e-05  4836s  gpu 8.6GB
+step  2500  loss 1.204  lr 2.46e-05  4885s  gpu 8.7GB
+  [val_clean] loss=0.1766  SER=0.0177  pitch_ER=0.0144  duration_ER=0.0089  sequence_acc=0.7969
+  [val_scan] loss=0.2820  SER=0.0508  pitch_ER=0.0417  duration_ER=0.0233  sequence_acc=0.6328
+  [val_real] loss=0.1639  SER=0.0241  pitch_ER=0.0210  duration_ER=0.0131  sequence_acc=0.7521
+  saved best (val_real SER 0.0241)
+step  2550  loss 1.199  lr 2.19e-05  4957s  gpu 9.6GB
+step  2600  loss 1.195  lr 1.95e-05  5006s  gpu 9.6GB
+step  2650  loss 1.190  lr 1.73e-05  5054s  gpu 9.6GB
+step  2700  loss 1.199  lr 1.54e-05  5102s  gpu 9.7GB
+step  2750  loss 1.189  lr 1.37e-05  5155s  gpu 9.6GB
+step  2800  loss 1.189  lr 1.24e-05  5208s  gpu 9.6GB
+step  2850  loss 1.191  lr 1.14e-05  5260s  gpu 9.7GB
+step  2900  loss 1.190  lr 1.06e-05  5313s  gpu 9.7GB
+step  2950  loss 1.190  lr 1.02e-05  5362s  gpu 9.6GB
+step  3000  loss 1.183  lr 1.00e-05  5410s  gpu 9.7GB
+  [val_clean] loss=0.1730  SER=0.0161  pitch_ER=0.0129  duration_ER=0.0077  sequence_acc=0.8047
+  [val_scan] loss=0.2769  SER=0.0475  pitch_ER=0.0381  duration_ER=0.0223  sequence_acc=0.6602
+  [val_real] loss=0.1550  SER=0.0234  pitch_ER=0.0210  duration_ER=0.0100  sequence_acc=0.7735
+  saved best (val_real SER 0.0234)
+done in 5432s, best SER 0.0234

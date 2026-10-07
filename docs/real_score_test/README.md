@@ -54,6 +54,13 @@ treble clef on the violins, the bass clef on the timpani, and the repeated-note
 pattern on the violins. Rhythms come out as unrelated quarter and eighth values,
 because beamed groups and triplets never appeared in training.
 
+## After fine-tuning on real engravings
+
+The fine-tuned model (`runs/real_ft`, 1.9% SER on held-out OpenScore
+engravings) still fails here; see `predictions_finetuned.json`. Clean
+engraving was the easier half of the gap; scan quality and missing notation
+(alto clef, 5/4, triplets) remain.
+
 ## What it would take
 
 Fine-tuning on Camera-PrIMuS (real engraving with photo distortion), adding the

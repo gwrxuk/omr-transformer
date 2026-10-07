@@ -78,6 +78,54 @@ class PrimusDataset(Dataset):
         return to_tensor(img), torch.tensor(self.vocab.encode(seq))
 
 
+class RenderedStaves(Dataset):
+    """Real engravings built by scripts/build_openscore_data.py (labels.jsonl + img/)."""
+
+    def __init__(self, vocab: Vocab, root: str | Path, split: str,
+                 degrade_strength: float | tuple[float, float] = 0.0, max_width: int = 1016,
+                 seed: int = 0):
+        import json
+        self.vocab, self.root, self.split = vocab, Path(root), split
+        self.items = [json.loads(line) for line in (self.root / "labels.jsonl").read_text().splitlines()
+                      if json.loads(line)["split"] == split]
+        self.strength, self.max_width, self.seed = degrade_strength, max_width, seed
+
+    def __len__(self) -> int:
+        return len(self.items)
+
+    def __getitem__(self, i: int):
+        return self.get(i, salt=0)
+
+    def get(self, i: int, salt: int):
+        """Item i with degradation seeded by (i, salt), so repeated draws differ."""
+        it = self.items[i]
+        img = Image.open(self.root / "img" / f"{it['id']}.png").convert("L")
+        if img.width > self.max_width:  # keep every batch at one fixed shape
+            img = img.resize((self.max_width, img.height), Image.BILINEAR)
+        rng = random.Random(zlib.crc32(f"real:{self.split}:{i}:{salt}:{self.seed}".encode()))
+        s = self.strength
+        s = rng.uniform(*s) if isinstance(s, tuple) else s
+        a = degrade(np.asarray(img), rng, s)
+        return to_tensor(a), torch.tensor(self.vocab.encode(it["tokens"]))
+
+
+class Mixed(Dataset):
+    """Interleave two datasets: index i draws from `a` with probability `frac_a` (seeded per index)."""
+
+    def __init__(self, a: Dataset, b: Dataset, frac_a: float, size: int):
+        self.a, self.b, self.frac_a, self.size = a, b, frac_a, size
+
+    def __len__(self) -> int:
+        return self.size
+
+    def __getitem__(self, i: int):
+        rng = random.Random(zlib.crc32(f"mix:{i}".encode()))
+        if rng.random() < self.frac_a:
+            j = rng.randrange(len(self.a))
+            return self.a.get(j, salt=i) if hasattr(self.a, "get") else self.a[j]
+        return self.b[i % len(self.b)]
+
+
 def collate(batch, pad_id: int, w_bucket: int = 128, l_bucket: int = 8,
             fixed_w: int | None = None, fixed_l: int | None = None):
     """Pad images on the right (paper=0) and targets with <pad>.

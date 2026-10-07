@@ -1,0 +1,436 @@
+{
+ "summary": {
+  "samples": 37,
+  "SER": 0.018779342723004695,
+  "pitch_ER": 0.018779342723004695,
+  "duration_ER": 0.006259780907668232,
+  "sequence_acc": 0.7567567567567568
+ },
+ "items": [
+  {
+   "song": "scores/Lang,_Josephine/6_Lieder,_Op.12/4_O_wärst_du_da/lc6059127.mscx",
+   "status": "ok",
+   "start_measure": 8,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-DM timeSignature-2/4 note-F#4_quarter note-E4_quarter barline note-A4_quarter. note-G4_eighth barline note-F#4_quarter note-E4_quarter barline",
+   "pred": "clef-G2 keySignature-DM timeSignature-2/4 note-F#4_quarter note-E4_quarter barline note-A4_quarter. note-G4_eighth barline note-F#4_quarter note-E4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Mackenzie,_Alexander/Spring_Songs,_Op.44/4_Spring_Is_Not_Dead/lc6507219.mscx",
+   "status": "ok",
+   "start_measure": 7,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-CM timeSignature-3/4 note-A4_eighth. note-A4_sixteenth note-B4_quarter note-A4_quarter barline note-F#4_quarter note-G4_quarter rest-quarter barline note-E4_half note-F4_eighth note-G4_eighth barline",
+   "pred": "clef-G2 keySignature-CM timeSignature-3/4 note-A4_eighth. note-A4_sixteenth note-B4_quarter note-A4_quarter barline note-F#4_quarter note-G4_quarter rest-quarter barline note-E4_half note-F4_eighth note-G4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Boulanger,_Lili/Clairières_dans_le_ciel/11_Par_ce_que_j’ai_souffert/lc5901729.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Greger,_Luise/Lieder,_Op.125/2_Es_duften_süss_die_Linden/lc6171433.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Schubert,_Franz/4_Lieder,_Op.96/2_Jägers_Liebeslied,_D.909/lc6486395.mscx",
+   "status": "ok",
+   "start_measure": 7,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-DM timeSignature-6/8 note-D4_eighth note-F#4_eighth note-D4_eighth note-A4_quarter note-F#4_eighth barline note-D4_quarter note-A3_eighth note-D4_quarter note-F#4_eighth barline note-F#4_eighth note-A4_eighth note-F#4_eighth note-D5_eighth. note-C#5_sixteenth note-B4_eighth barline",
+   "pred": "clef-G2 keySignature-DM timeSignature-6/8 note-D4_eighth note-F#4_eighth note-D4_eighth note-A4_quarter note-F#4_eighth barline note-D4_quarter note-A3_eighth note-D4_quarter note-F#4_eighth barline note-F#4_eighth note-A4_eighth note-F#4_eighth note-D5_eighth. note-C#5_sixteenth note-B4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Reichardt,_Louise/12_Gesänge/10_Die_Veilchen/lc5087944.mscx",
+   "status": "ok",
+   "start_measure": 3,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-2/4 note-A4_quarter. note-B4_eighth barline note-G4_quarter rest-quarter barline note-A4_quarter note-G4_quarter barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-2/4 note-A4_quarter. note-B4_eighth barline note-G4_quarter rest-quarter barline note-A4_quarter note-G4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Lehmann,_Liza/5_Little_Love_Songs/2_Along_the_sunny_lane/lc6209602.mscx",
+   "status": "ok",
+   "start_measure": 7,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-DM timeSignature-4/4 note-A4_quarter note-F#4_quarter note-A4_quarter note-F#5_quarter barline note-B4_half. rest-quarter barline note-A4_quarter note-F#4_quarter note-A4_quarter note-F#5_quarter barline",
+   "pred": "clef-G2 keySignature-DM timeSignature-4/4 note-A4_quarter note-F#4_quarter note-A4_quarter note-F#5_quarter barline note-B4_half. rest-quarter barline note-A4_quarter note-F#4_quarter note-A4_quarter note-F#5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Holmès,_Augusta_Mary_Anne/Contes_divins/4_La_Belle_Madeleine/lc5925129.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-6/8 rest-quarter rest-eighth rest-quarter note-E4_eighth barline note-B4_quarter. note-A4_eighth note-G4_eighth note-A4_eighth barline note-B4_eighth note-A4_eighth note-G4_eighth note-A4_quarter note-B4_eighth barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-6/8 rest-quarter rest-eighth rest-quarter note-E4_eighth barline note-B4_quarter. note-A4_eighth note-G4_eighth note-A4_eighth barline note-B4_eighth note-A4_eighth note-G4_eighth note-A4_quarter note-B4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Reichardt,_Louise/12_Gesänge,_Op.3/02_Der_traurige_Wanderer/lc5061310.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-2/4 note-D4_quarter note-D4_quarter barline note-D4_quarter. note-G4_eighth barline note-F#4_quarter note-G4_quarter barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-2/4 note-D4_quarter note-D4_quarter barline note-D4_quarter. note-G4_eighth barline note-F#4_quarter note-G4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Kinkel,_Johanna/6_Lieder,_Op.6/2_Wasser_und_Wein/lc6248302.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-BbM timeSignature-2/4 note-Bb4_eighth note-B4_eighth note-C5_eighth note-F4_eighth barline note-F5_quarter note-D5_quarter barline note-C5_quarter note-Bb4_quarter barline",
+   "pred": "clef-G2 keySignature-BbM timeSignature-2/4 note-Bb4_eighth note-B4_eighth note-C5_eighth note-F4_eighth barline note-F5_quarter note-D5_quarter barline note-C5_quarter note-Bb4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Schumann,_Robert/Myrthen,_Op.25/05_Sitz’_ich_allein/lc6909543.mscx",
+   "status": "ok",
+   "start_measure": 12,
+   "measures": 2,
+   "truth": "clef-G2 keySignature-CM timeSignature-6/8 note-C5_quarter note-G4_eighth rest-quarter note-G4_eighth barline note-C5_eighth. note-G4_sixteenth note-G4_sixteenth note-G4_sixteenth note-G4_eighth. note-A4_sixteenth note-B4_eighth barline",
+   "pred": "clef-G2 keySignature-CM timeSignature-6/8 note-C5_quarter note-G4_eighth rest-quarter note-G4_eighth barline note-C5_eighth. note-G4_sixteenth note-G4_sixteenth note-G4_sixteenth note-G4_eighth. note-A4_sixteenth note-B4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Franz,_Robert/6_Gesänge,_Op.14/2_Lenz/lc5117956.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Schröter,_Corona/25_Lieder/17_Der_Erlkönig/lc6050301.mscx",
+   "status": "ok",
+   "start_measure": 4,
+   "measures": 2,
+   "truth": "clef-G2 keySignature-AM timeSignature-6/8 note-G#4_quarter note-G#4_eighth note-G#4_eighth. note-A4_sixteenth note-B4_eighth barline note-C#5_quarter note-A4_eighth note-A4_eighth rest-eighth note-E4_eighth barline",
+   "pred": "clef-G2 keySignature-AM timeSignature-6/8 note-G#4_quarter note-G#4_eighth note-G#4_eighth. note-A4_sixteenth note-B4_eighth barline note-C#5_quarter note-A4_eighth rest-eighth note-E4_eighth barline",
+   "SER": 0.0667
+  },
+  {
+   "song": "scores/Chausson,_Ernest/Serres_chaudes,_Op.24/2_Serre_d’ennui/lc5057844.mscx",
+   "status": "ok",
+   "start_measure": 5,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-4/4 rest-eighth note-Bb4_eighth note-Bb4_eighth note-Bb4_eighth note-B4_eighth note-B4_eighth note-B4_eighth note-B4_eighth barline note-C#5_quarter. note-C#5_eighth note-C5_eighth note-C5_eighth note-D5_eighth note-E5_eighth barline note-E5_half note-D5_quarter note-C5_quarter barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-4/4 rest-eighth note-Bb4_eighth note-B4_eighth note-B4_eighth note-B4_eighth note-B4_eighth note-B4_eighth note-B4_eighth barline note-C#5_quarter. note-C#5_eighth note-C#5_eighth note-C#5_eighth note-D5_eighth note-E5_eighth barline note-E5_half note-D5_quarter note-C5_quarter barline",
+   "SER": 0.1739
+  },
+  {
+   "song": "scores/Hensel,_Fanny/6_Lieder,_Op.1/5_Morgenständchen/lc5004650.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Chausson,_Ernest/Serres_chaudes,_Op.24/3_Lassitude/lc5057847.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Brahms,_Johannes/9_Lieder_und_Gesänge,_Op.32/9_Wie_bist_du,_meine_Königin/lc5846100.mscx",
+   "status": "ok",
+   "start_measure": 6,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-EbM timeSignature-3/8 note-Eb5_eighth note-D5_eighth note-C5_eighth barline note-C5_eighth. note-Bb4_sixteenth note-F4_sixteenth note-G4_sixteenth barline note-Ab4_quarter rest-eighth barline",
+   "pred": "clef-G2 keySignature-EbM timeSignature-3/8 note-Eb5_eighth note-D5_eighth note-C5_eighth barline note-C5_eighth. note-Bb4_sixteenth note-F4_sixteenth note-G4_sixteenth barline note-Ab4_quarter rest-eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Viardot,_Pauline/6_Mélodies_et_une_havanaise/7c_Havanaise/lc6641589.mscx",
+   "status": "ok",
+   "start_measure": 11,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-CM timeSignature-2/4 rest-quarter rest-eighth note-E4_sixteenth note-F4_sixteenth barline note-G4_eighth note-G4_sixteenth note-G4_sixteenth note-C5_eighth note-C5_eighth barline note-B4_quarter. note-D4_sixteenth note-E4_sixteenth barline",
+   "pred": "clef-G2 keySignature-CM timeSignature-2/4 rest-quarter rest-eighth note-E4_sixteenth note-F4_sixteenth barline note-G4_eighth note-G4_sixteenth note-G4_sixteenth note-C5_eighth note-C5_eighth barline note-B4_quarter. note-D4_sixteenth note-E4_sixteenth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Grandval,_Clémence_de/_/La_délaissée/lc6625953.mscx",
+   "status": "ok",
+   "start_measure": 4,
+   "measures": 2,
+   "truth": "clef-G2 keySignature-GM timeSignature-4/4 rest-eighth note-G4_eighth note-A4_eighth note-D5_eighth note-C5_eighth note-G4_eighth note-A4_eighth note-Bb4_eighth barline note-G4_eighth note-D4_eighth note-Eb4_eighth note-G4_eighth note-Bb4_eighth note-C5_eighth note-A4_quarter barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-4/4 rest-eighth note-G4_eighth note-A4_eighth note-D5_eighth note-C5_eighth note-G4_eighth note-A4_eighth note-Bb4_eighth barline note-G4_eighth note-D4_eighth note-Eb4_eighth note-G4_eighth note-Bb4_eighth note-C5_eighth note-A4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Schubert,_Franz/Schwanengesang,_D.957/06_In_der_Ferne/lc4985987.mscx",
+   "status": "ok",
+   "start_measure": 8,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-DM timeSignature-3/4 note-F#4_quarter note-F#4_quarter note-F#4_quarter barline note-F#4_quarter. note-G4_eighth note-F#4_quarter barline note-F#4_quarter. note-F#4_eighth note-B4_quarter barline",
+   "pred": "clef-G2 keySignature-DM timeSignature-3/4 note-F#4_quarter note-F#4_quarter note-F#4_quarter barline note-F#4_quarter. note-G4_eighth note-F#4_quarter barline note-F#4_quarter. note-F#4_eighth note-B4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Stanford,_Charles_Villiers/A_Cycle_of_Songs,_Op.68/2_Sweet_and_low/lc6788150.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Cornelius,_Peter/6_Lieder,_Op.1/3_Wiegenlied/lc5054946.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-DM timeSignature-6/8 note-A4_quarter note-F#4_eighth note-D4_quarter rest-eighth barline note-A4_quarter note-A4_eighth note-A4_eighth note-D5_eighth note-B4_eighth barline note-A4_quarter. note-F#4_quarter rest-eighth barline",
+   "pred": "clef-G2 keySignature-DM timeSignature-6/8 note-A4_quarter note-F#4_eighth note-D4_quarter rest-eighth barline note-A4_quarter note-A4_eighth note-A4_eighth note-A4_eighth note-D5_eighth note-B4_eighth barline note-A4_quarter. note-F#4_quarter rest-eighth barline",
+   "SER": 0.0556
+  },
+  {
+   "song": "scores/Holmès,_Augusta_Mary_Anne/Les_Sérénades/1_Sérénade_printanière/lc5001684.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Brahms,_Johannes/9_Lieder_und_Gesänge,_Op.63/8_Heimweh_II/lc5937814.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Brahms,_Johannes/7_Lieder,_Op.48/5_Trost_in_Tränen/lc5071629.mscx",
+   "status": "ok",
+   "start_measure": 12,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-6/8 note-E5_eighth note-D#5_eighth note-C5_eighth note-B4_quarter note-A4_eighth barline note-G4_quarter note-G4_eighth note-B4_quarter note-A4_eighth barline note-F#4_quarter rest-eighth rest-quarter note-B4_eighth barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-6/8 note-E5_eighth note-D#5_eighth note-C5_eighth note-B4_quarter note-A4_eighth barline note-G4_quarter note-G4_eighth note-B4_quarter note-A4_eighth barline note-F#4_quarter rest-eighth rest-quarter note-B4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Jacobs-Bond,_Carrie/3_Songs_as_Unpretentious_as_the_Wild_Rose/1_Nothing_But_a_Wild_Rose/lc6586980.mscx",
+   "status": "ok",
+   "start_measure": 5,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-4/4 note-B4_eighth note-B4_eighth note-B4_eighth note-B4_eighth note-B4_quarter. note-D5_eighth barline note-D5_half note-F#4_half barline note-G4_eighth note-G4_eighth note-G4_eighth note-G4_eighth note-E4_quarter. note-E4_eighth barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-4/4 note-B4_eighth note-B4_eighth note-B4_eighth note-B4_eighth note-B4_quarter. note-D5_eighth barline note-D5_half note-F#4_half barline note-G4_eighth note-G4_eighth note-G4_eighth note-G4_eighth note-E4_quarter. note-E4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Reichardt,_Louise/12_Deutsche_und_Italiänische_Romantische_Gesänge/04_Wohl_dem_Mann/lc5100073.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Schumann,_Robert/5_Lieder_und_Gesänge,_Op.127/2_Dein_Angesicht/lc6834542.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-EbM timeSignature-2/4 note-Bb4_eighth. note-Bb4_sixteenth note-Bb4_eighth note-Bb4_eighth barline note-C5_eighth note-C5_eighth note-F5_eighth. note-Eb5_sixteenth barline note-D5_eighth note-C5_eighth note-Bb4_eighth note-Ab4_eighth barline",
+   "pred": "clef-G2 keySignature-EbM timeSignature-2/4 note-Bb4_eighth. note-Bb4_sixteenth note-Bb4_eighth note-Bb4_eighth barline note-C5_eighth note-C5_eighth note-F5_eighth. note-Eb5_sixteenth barline note-D5_eighth note-C5_eighth note-Bb4_eighth note-Ab4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Brahms,_Johannes/Marienlieder,_Op.22/4_Der_Jäger/lc8712405.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-4/4 note-G4_quarter. note-B4_eighth note-D5_quarter note-E5_quarter barline note-D5_half note-B4_quarter note-E5_quarter barline note-D5_quarter note-B4_eighth note-E5_eighth note-D5_eighth note-C5_eighth note-B4_quarter barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-4/4 note-G4_quarter. note-B4_eighth note-D5_quarter note-E5_quarter barline note-D5_half note-B4_quarter note-E5_quarter barline note-D5_quarter note-B4_eighth note-E5_eighth note-D5_eighth note-C5_eighth note-B4_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Kinkel,_Johanna/6_Lieder,_Op.16/5_Rheinfahrt/lc6573240.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-FM timeSignature-4/4 note-F4_quarter note-A4_eighth. note-G4_sixteenth note-G4_quarter note-Bb4_eighth. note-A4_sixteenth barline note-A4_quarter note-D5_eighth. note-C5_sixteenth note-C5_quarter note-C5_eighth note-F5_eighth barline note-F5_eighth note-A4_eighth note-A4_eighth note-C5_eighth note-C5_eighth note-E4_eighth note-E4_eighth note-G4_eighth barline",
+   "pred": "clef-G2 keySignature-FM timeSignature-4/4 note-F4_quarter note-A4_eighth. note-G4_sixteenth note-G4_quarter note-Bb4_eighth. note-A4_sixteenth barline note-A4_quarter note-D5_eighth. note-C5_sixteenth note-C5_quarter note-C5_eighth note-F5_eighth barline note-F5_eighth note-A4_eighth note-A4_eighth note-C5_eighth note-C5_eighth note-E4_eighth note-G4_eighth barline",
+   "SER": 0.0385
+  },
+  {
+   "song": "scores/Mendelssohn,_Felix/6_Gesänge,_Op.86/1_Das_Fenster,_MWV_K_29/lc6989284.mscx",
+   "status": "ok",
+   "start_measure": 22,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-GM timeSignature-6/8 note-D5_eighth note-C5_eighth note-A4_eighth note-G4_eighth note-F#4_eighth note-B4_eighth barline note-C5_eighth note-E5_eighth note-F#5_eighth note-A5_eighth. note-G5_sixteenth note-F#5_sixteenth note-E5_sixteenth barline note-D5_quarter rest-eighth rest-quarter note-B4_eighth barline",
+   "pred": "clef-G2 keySignature-GM timeSignature-6/8 note-D5_eighth note-C5_eighth note-A4_eighth note-G4_eighth note-F#4_eighth note-B4_eighth barline note-C5_eighth note-E5_eighth note-F#5_eighth note-G5_eighth. note-G5_sixteenth note-F#5_sixteenth note-E5_sixteenth barline note-D5_quarter rest-eighth rest-quarter note-B4_eighth barline",
+   "SER": 0.0435
+  },
+  {
+   "song": "scores/Holmès,_Augusta_Mary_Anne/Mélodies_pour_piano_et_chant/08_Souvenir/lc6001349.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Tegnér,_Alice/_/Betlehems_stjärna/lc6910499.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Webern,_Anton/5_Lieder_nach_Gedichten_von_Stefan_George,_Op.4/5_Ihr_tratet_zu_dem_Herde/lc6726319.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Fauré,_Gabriel/4_Songs,_Op.51/2_Au_cimetière/lc6137985.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-FM timeSignature-3/4 rest-quarter rest-quarter note-A4_quarter barline note-A4_quarter. note-A4_eighth note-Bb4_eighth note-Bb4_eighth barline note-C5_quarter. note-C5_eighth note-D5_eighth note-D5_eighth barline",
+   "pred": "clef-G2 keySignature-FM timeSignature-3/4 rest-quarter rest-quarter note-A4_quarter barline note-A4_quarter. note-A4_eighth note-Bb4_eighth note-Bb4_eighth barline note-C5_quarter. note-C5_eighth note-D5_eighth note-D5_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Schumann,_Clara/6_Lieder,_Op.13/4_Der_Mond_kommt_still_gegangen/lc5126921.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Munktell,_Helena/10_Songs/05_Cantilène/lc6654371.mscx",
+   "status": "ok",
+   "start_measure": 21,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-FM timeSignature-6/8 note-E5_half. barline note-Bb4_quarter. note-A4_quarter note-D5_eighth barline note-E5_quarter. note-D5_quarter note-E5_eighth barline",
+   "pred": "clef-G2 keySignature-FM timeSignature-6/8 note-E5_half. barline note-Bb4_quarter. note-A4_quarter note-D5_eighth barline note-E5_quarter. note-D5_quarter note-E5_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Schubert,_Franz/Die_schöne_Müllerin,_D.795/20_Des_Baches_Wiegenlied/lc4985931.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Greger,_Luise/Plattdeutsche_Lieder,_Opp.32-34/3_Still,_keiner_darw_dat_weiten!_Op.34/lc6267936.mscx",
+   "status": "ok",
+   "start_measure": 3,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-FM timeSignature-4/4 note-Bb4_quarter. note-A4_eighth note-G4_quarter note-C5_quarter barline note-C5_half rest-quarter note-A4_quarter barline note-Bb4_quarter. note-A4_eighth note-G4_quarter note-D5_quarter barline",
+   "pred": "clef-G2 keySignature-FM timeSignature-4/4 note-Bb4_quarter. note-A4_eighth note-G4_quarter note-C5_quarter barline note-C5_half rest-quarter note-A4_quarter barline note-Bb4_quarter. note-A4_eighth note-G4_quarter note-D5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Brahms,_Johannes/5_Poems,_Op.19/4_Der_Schmied/lc5654485.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-BbM timeSignature-3/4 note-D5_quarter note-F4_quarter note-D5_quarter barline note-F5_half note-F4_quarter barline note-D5_quarter note-F4_quarter note-D5_quarter barline",
+   "pred": "clef-G2 keySignature-BbM timeSignature-3/4 note-D5_quarter note-F4_quarter note-D5_quarter barline note-F5_half note-F4_quarter barline note-D5_quarter note-F4_quarter note-D5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Schubert,_Franz/_/Die_Forelle,_Op.32,_D550d/lc6900961.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Beethoven,_Ludwig_van/6_Lieder,_Op.48/2_Die_Liebe_des_Nächsten/lc4946378.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Brahms,_Johannes/9_Lieder_und_Gesänge,_Op.32/6_Du_sprichst,_dass_ich_mich_täuschte/lc5098641.mscx",
+   "status": "ok",
+   "start_measure": 5,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-EbM timeSignature-4/4 note-G4_quarter. note-Ab4_eighth note-Eb4_quarter note-F4_quarter barline note-G4_quarter note-G4_quarter rest-quarter note-D5_quarter barline note-F5_quarter. note-C5_eighth note-C5_quarter note-D5_quarter barline",
+   "pred": "clef-G2 keySignature-EbM timeSignature-4/4 note-G4_quarter. note-Ab4_eighth note-Eb4_quarter note-F4_quarter barline note-G4_quarter note-G4_quarter rest-quarter note-D5_quarter barline note-F5_quarter. note-C5_eighth note-C5_quarter note-D5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Le_Beau,_Luise_Adolpha/5_Lieder,_Op.7/1_Gruss_an_die_Nacht/lc6575645.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-BbM timeSignature-4/4 note-Bb4_quarter note-A4_quarter note-G4_quarter. note-D4_eighth barline note-D5_quarter note-C5_quarter note-Bb4_quarter rest-eighth note-D5_eighth barline note-G5_quarter note-D5_quarter note-F5_quarter note-Eb5_quarter barline",
+   "pred": "clef-G2 keySignature-BbM timeSignature-4/4 note-Bb4_quarter note-A4_quarter note-G4_quarter. note-D4_eighth barline note-D5_quarter note-C5_quarter note-Bb4_quarter rest-eighth note-D5_eighth barline note-G5_quarter note-D5_quarter note-F5_quarter note-Eb5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Warlock,_Peter/Peterisms,_Set_1/1_Chopcherry/lc6447286.mscx",
+   "status": "ok",
+   "start_measure": 7,
+   "measures": 2,
+   "truth": "clef-G2 keySignature-AM timeSignature-6/8 note-F#4_quarter note-G#4_sixteenth note-A4_sixteenth note-G#4_quarter note-A4_sixteenth note-B4_sixteenth barline note-C#5_eighth note-A#4_eighth note-F#4_eighth note-G#4_quarter. barline",
+   "pred": "clef-G2 keySignature-AM timeSignature-6/8 note-F#4_quarter note-G#4_sixteenth note-A4_sixteenth note-G#4_quarter note-A4_sixteenth note-B4_sixteenth barline note-C#5_eighth note-A#4_eighth note-F#4_eighth note-G4_quarter. barline",
+   "SER": 0.0667
+  },
+  {
+   "song": "scores/Abrams,_Harriett/_/Crazy_Jane/lc6583907.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 2,
+   "truth": "clef-G2 keySignature-BbM timeSignature-3/4 note-Bb4_quarter note-A4_eighth note-Bb4_eighth note-C5_eighth note-D5_eighth barline note-C5_eighth note-D5_sixteenth note-Eb5_sixteenth note-D5_quarter note-F5_eighth. note-Bb4_sixteenth barline",
+   "pred": "clef-G2 keySignature-BbM timeSignature-3/4 note-Bb4_quarter note-A4_eighth note-Bb4_eighth note-C5_eighth note-D5_eighth barline note-C5_eighth note-D5_sixteenth note-Eb5_sixteenth note-D5_quarter note-F5_eighth. note-Bb4_sixteenth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Thys,_Pauline/_/Petit_nègre/lc6670960.mscx",
+   "status": "ok",
+   "start_measure": 6,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-FM timeSignature-2/4 note-A4_quarter note-C5_quarter barline note-A4_quarter note-C5_quarter barline note-A4_quarter note-F5_quarter barline",
+   "pred": "clef-G2 keySignature-FM timeSignature-2/4 note-A4_quarter note-C5_quarter barline note-A4_quarter note-C5_quarter barline note-A4_quarter note-F5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Satie,_Erik/Socrate/2_Bords_de_l’Ilissus/lc6481941.mscx",
+   "status": "ok",
+   "start_measure": 7,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-CM timeSignature-6/8 rest-eighth note-E4_eighth note-F#4_eighth note-G4_eighth note-E4_eighth note-F#4_eighth barline note-G4_eighth note-E4_eighth note-G4_eighth note-B4_quarter rest-eighth barline note-C#5_eighth note-B4_eighth note-A4_eighth note-B4_eighth note-A4_eighth note-G4_eighth barline",
+   "pred": "clef-G2 keySignature-CM timeSignature-6/8 rest-eighth note-E4_eighth note-F#4_eighth note-G4_eighth note-E4_eighth note-F4_eighth barline note-G4_eighth note-E4_eighth note-G4_eighth note-B4_quarter rest-eighth barline note-C#5_eighth note-B4_eighth note-A4_eighth note-B4_eighth note-A4_eighth note-G4_eighth barline",
+   "SER": 0.0435
+  },
+  {
+   "song": "scores/Jaëll,_Marie/4_Mélodies/2_Éternel_amour/lc5837811.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Gonzaga,_Chiquinha/_/Trigueira/lc6611874.mscx",
+   "status": "ok",
+   "start_measure": 10,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-FM timeSignature-2/4 note-C5_quarter. rest-eighth barline note-A4_sixteenth note-A4_sixteenth note-A4_sixteenth note-A4_sixteenth note-A4_eighth note-G4_sixteenth note-F4_sixteenth barline note-A4_quarter note-A4_eighth rest-eighth barline",
+   "pred": "clef-G2 keySignature-FM timeSignature-2/4 note-C5_quarter. rest-eighth barline note-A4_sixteenth note-A4_sixteenth note-A4_sixteenth note-A4_sixteenth note-A4_sixteenth note-A4_eighth note-G4_sixteenth note-F4_sixteenth barline note-A4_quarter note-A4_eighth rest-eighth barline",
+   "SER": 0.0556
+  },
+  {
+   "song": "scores/Holmès,_Augusta_Mary_Anne/_/Le_ruban_rose/lc6189719.mscx",
+   "status": "ok",
+   "start_measure": 12,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-BbM timeSignature-4/4 note-G4_quarter note-D5_quarter note-D5_quarter note-C5_quarter barline note-D5_half note-Eb5_quarter note-F5_quarter barline note-D5_quarter note-C5_eighth note-Bb4_eighth note-C5_quarter note-D5_quarter barline",
+   "pred": "clef-G2 keySignature-BbM timeSignature-4/4 note-G4_quarter note-D5_quarter note-D5_quarter note-C5_quarter barline note-D5_half note-Eb5_quarter note-F5_quarter barline note-D5_quarter note-C5_eighth note-Bb4_eighth note-C5_quarter note-D5_quarter barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Brahms,_Johannes/5_Poems,_Op.19/5_An_eine_Äolsharfe/lc5667745.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Faisst,_Clara_Mathilda/4_Lieder,_Op.11/01_Wanderlied/lc6258870.mscx",
+   "status": "ok",
+   "start_measure": 2,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-DM timeSignature-2/4 note-D5_quarter note-C#5_quarter barline note-D5_quarter note-C#5_eighth note-B4_eighth barline note-A4_quarter note-G#4_eighth note-G#4_eighth barline",
+   "pred": "clef-G2 keySignature-DM timeSignature-2/4 note-D5_quarter note-C#5_quarter barline note-D5_quarter note-C#5_eighth note-B4_eighth barline note-A4_quarter note-G#4_eighth note-G#4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Schumann,_Robert/Dichterliebe,_Op.48/14_Allnächtlich_im_Traume/lc4978397.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Franz,_Robert/6_Gesänge,_Op.16/3_Der_Fichtenbaum/lc6800506.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Gonzaga,_Chiquinha/_/A_mulatinha/lc6608395.mscx",
+   "status": "ok",
+   "start_measure": 9,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-CM timeSignature-2/4 rest-quarter rest-eighth note-E4_eighth barline note-F4_sixteenth note-F4_eighth note-D4_sixteenth note-E4_eighth note-F4_eighth barline note-G4_eighth note-G4_eighth rest-eighth note-G4_eighth barline",
+   "pred": "clef-G2 keySignature-CM timeSignature-2/4 rest-quarter rest-eighth note-E4_eighth barline note-F4_sixteenth note-F4_eighth note-D4_sixteenth note-E4_eighth note-F4_eighth barline note-G4_eighth note-G4_eighth rest-eighth note-G4_eighth barline",
+   "SER": 0.0
+  },
+  {
+   "song": "scores/Coleridge-Taylor,_Samuel/6_Sorrow_Songs,_Op.57/3_Oh,_Roses_for_the_flush_of_youth/lc6189637.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Schubert,_Franz/Winterreise,_D.911/16_Letzte_Hoffnung/lc5007180.mscx",
+   "status": "ok",
+   "start_measure": 6,
+   "measures": 3,
+   "truth": "clef-G2 keySignature-EbM timeSignature-3/4 note-Cb5_eighth note-Ab4_eighth note-Cb5_quarter. note-Ab4_eighth barline note-F4_eighth note-A4_eighth note-Bb4_quarter. note-Ab4_eighth barline note-G4_eighth note-F4_eighth note-Eb4_eighth note-F4_eighth note-G4_eighth. note-F4_sixteenth barline",
+   "pred": "clef-G2 keySignature-EbM timeSignature-3/4 note-Cb5_eighth note-Ab4_eighth note-C5_quarter. note-Ab4_eighth barline note-F4_eighth note-A4_eighth note-Bb4_quarter. note-Ab4_eighth barline note-G4_eighth note-F4_eighth note-Eb4_eighth note-F4_eighth note-G4_eighth. note-F4_sixteenth barline",
+   "SER": 0.05
+  },
+  {
+   "song": "scores/Netzel,_Laura/4_Songs,_Op.46/1_Rappelle-toi/lc6661509.mscx",
+   "status": "no in-vocabulary excerpt"
+  },
+  {
+   "song": "scores/Brahms,_Johannes/9_Lieder_und_Gesänge,_Op.32/1_Wie_rafft_ich_mich_auf_in_der_Nacht/lc5069058.mscx",
+   "status": "no in-vocabulary excerpt"
+  }
+ ]
+}

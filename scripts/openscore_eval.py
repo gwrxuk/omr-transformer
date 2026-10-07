@@ -63,12 +63,17 @@ def note_token(n, vocab: Vocab) -> str | None:
 
 
 def excerpt(path: Path, vocab: Vocab, rng: random.Random):
-    """Return (music21 score of the excerpt, ground-truth tokens) or None."""
+    """Return the first valid (music21 score of the excerpt, tokens, where) or None."""
+    return next(iter_excerpts(path, vocab), None)
+
+
+def iter_excerpts(path: Path, vocab: Vocab, step: int = 1):
+    """Yield every valid (excerpt score, ground-truth tokens, where) window in order."""
     from music21 import clef, converter, key, meter, metadata, stream
     sc = converter.parse(str(path))
     part = sc.parts[0]
     measures = list(part.getElementsByClass("Measure"))
-    for start in range(0, max(0, len(measures) - 2)):
+    for start in range(0, max(0, len(measures) - 2), step):
         for length in (3, 2):
             win = measures[start:start + length]
             if len(win) < length:
@@ -129,8 +134,8 @@ def excerpt(path: Path, vocab: Vocab, rng: random.Random):
             out.metadata = metadata.Metadata()
             out.metadata.title = ""
             out.metadata.composer = ""
-            return out, toks, {"start_measure": start + 1, "measures": length}
-    return None
+            yield out, toks, {"start_measure": start + 1, "measures": length}
+            break  # one window per start position
 
 
 def staff_crop(png: Path) -> np.ndarray | None:

@@ -1,6 +1,11 @@
 # Real engravings: OpenScore Lieder corpus
 
-**Result: on 37 real engraved vocal-line excerpts the model's symbol error rate
+**Update, after fine-tuning on real engravings: SER on the same 37 held-out
+excerpts fell from 73.6% to 1.9%** (exact excerpts 0% to 75.7%; clef, key and
+time signature now 37/37 each). See "Fine-tuning on real engravings" below.
+The baseline analysis follows unchanged.
+
+**Baseline result: on 37 real engraved vocal-line excerpts the model's symbol error rate
 is 73.6%, against 2.8% on its synthetic test set.** It reads clefs (37/37) and
 key signatures (34/37) correctly, but it outputs 3/8 as the time signature for
 every excerpt (correct 1/37), then places barlines to fit that wrong metre.
@@ -76,3 +81,47 @@ The next step is the same as for the scanned-page check (`../real_score_test/`):
 train on real engraving. Rendering corpus excerpts like these with MuseScore
 would give unlimited real-engraving training data with exact labels; held-out
 songs would then serve as the test set.
+
+## Fine-tuning on real engravings
+
+Following the conclusion above, the corpus was turned into training data
+(`scripts/build_openscore_data.py`), split **by song**:
+
+| Split | Songs | Excerpts | Use |
+|---|---|---|---|
+| Test | 60 (the songs above, seed 0) | 37 | never seen in training |
+| Validation | 50 (seed 1) | 234 | checkpoint selection |
+| Train | 1,242 | 5,327 | up to 8 excerpts per song, step of 2 measures |
+
+Excerpts use the same rules as the test, are engraved with MuseScore 4 in one
+batch job and cropped identically. The baseline checkpoint was fine-tuned for
+3,000 steps (batch 32, learning rate 2e-4, 200 warmup steps), each sample drawn
+half from real engravings and half from the synthetic generator, with scan-style
+degradation at random strength on both (`runs/real_ft/config.json`). Training
+took about 65 minutes of compute on an Apple M4 (5,432 s on the clock,
+including a 26-minute pause while the machine slept). Crops are identical to
+the baseline test, so only `results.json` is kept for the fine-tuned run.
+
+| Test set | Baseline | Fine-tuned |
+|---|---|---|
+| OpenScore held-out songs, SER (37 excerpts) | 73.6% | **1.9%** |
+| OpenScore held-out songs, exact excerpts | 0% | **75.7%** |
+| OpenScore clef / key / time correct | 37 / 34 / 1 | 37 / 37 / 37 |
+| Synthetic clean, SER (1,000) | 2.8% | 1.8% |
+| Synthetic degraded, SER (1,000) | 7.3% | 5.2% |
+
+The median held-out excerpt is now transcribed perfectly, and the synthetic
+test sets improved as well rather than being forgotten. Per-excerpt results:
+`../openscore_test_ft/results.json`.
+
+**Remaining errors** are mostly accidentals governed by engraving convention.
+In real engraving an accidental holds for the rest of the measure, so a B-flat
+written once makes later Bs in the bar flat without a sign; the synthetic
+engraver redraws every accidental, and the worst held-out excerpt (17% SER)
+fails exactly there. Teaching the synthetic engraver this rule is the obvious
+next fix.
+
+**Not solved:** the scanned orchestral page (`../real_score_test/`) still fails
+after fine-tuning. Its alto clef, 5/4 metre and triplets are outside the
+vocabulary, and its broken low-resolution staff lines are outside the training
+distribution (`predictions_finetuned.json` there).

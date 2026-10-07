@@ -99,12 +99,23 @@ and `<name>.mid`.
 
 ## Real engravings (OpenScore Lieder)
 
-On 37 vocal-line excerpts from the CC0 [OpenScore Lieder Corpus](https://github.com/OpenScore/Lieder),
-engraved with MuseScore 4, the symbol error rate is **73.6%** (synthetic test:
-2.8%). Clefs (37/37) and key signatures (34/37) transfer; time signatures do
-not (the model outputs 3/8 every time), and the decoder then forces barlines and
-durations to fit that wrong metre. Method, per-excerpt results and sources:
-[docs/openscore_test/](docs/openscore_test/README.md).
+Tested on 37 vocal-line excerpts from held-out songs of the CC0
+[OpenScore Lieder Corpus](https://github.com/OpenScore/Lieder), engraved with
+MuseScore 4:
+
+| Model | OpenScore SER | Exact excerpts | Synthetic clean / degraded SER |
+|---|---|---|---|
+| Synthetic-only (`runs/base`) | 73.6% | 0% | 2.8% / 7.3% |
+| + fine-tuned on 5,327 real engravings (`runs/real_ft`) | **1.9%** | **75.7%** | 1.8% / 5.2% |
+
+The synthetic-only model read clefs and keys but output 3/8 for every time
+signature, and its decoder forced barlines to fit that metre. Fine-tuning on
+MuseScore renders of 1,242 other songs (split by song, so test songs are never
+seen) fixed that without hurting the synthetic tests. Build and evaluation:
+`python scripts/build_openscore_data.py`, then
+`python -m omr.train --init runs/base/best.pt --real-root data/openscore_train --steps 3000 --lr 2e-4 --warmup 200 --out runs/real_ft`,
+then `python scripts/openscore_eval.py --ckpt runs/real_ft/best.pt`.
+Details: [docs/openscore_test/](docs/openscore_test/README.md).
 
 ## Out-of-domain check on a real score
 
