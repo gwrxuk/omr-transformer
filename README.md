@@ -97,6 +97,15 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q      # 57 tests
 `predict` writes `<name>.tokens.txt`, `<name>.musicxml` (opens in MuseScore)
 and `<name>.mid`.
 
+## Out-of-domain check on a real score
+
+Run on six staves cropped from the first page of Holst's *Mars* (public-domain
+music; low-resolution page image from the Dover full-score listing, source in
+the linked note), the model **does not transfer**: it misreads alto and bass
+clefs as treble, invents key signatures, cannot express 5/4, and turns beamed
+triplets into unrelated durations. Details, crops, raw predictions and source:
+[docs/real_score_test/](docs/real_score_test/README.md).
+
 ## Limits and next steps
 
 - The training images are synthetic and engraved by a simple renderer: one
