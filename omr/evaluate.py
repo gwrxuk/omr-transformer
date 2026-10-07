@@ -62,7 +62,8 @@ def main(argv=None) -> None:
         report[name] = scores.summary()
         print(name, json.dumps(report[name]))
     report["top_confusions"] = [f"{a} -> {b} ({n})" for (a, b), n in confusions.most_common(10)]
-    out = Path(args.ckpt).parent / f"test_results{'_beam' + str(args.beam) if args.beam else ''}.json"
+    suffix = (f"_beam{args.beam}" if args.beam else "") + (f"_n{args.size}" if args.size != 1000 else "")
+    out = Path(args.ckpt).parent / f"test_results{suffix}.json"
     out.write_text(json.dumps(report, indent=2))
     print("top confusions:", *report["top_confusions"], sep="\n  ")
     print("wrote", out)

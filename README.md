@@ -24,7 +24,7 @@ SER is the symbol error rate: token-level edit distance divided by reference
 length. Pitch ER and duration ER apply the same measure after splitting each
 note token into its pitch and duration parts, so they show which half of the
 symbol is wrong. Beam search (k=4) lowers scan SER from 6.9% to 6.3% on a
-200-staff subset (`test_results_beam4.json`).
+200-staff subset (`test_results_beam4_n200.json`).
 
 ![validation SER](docs/ser_curve.png)
 

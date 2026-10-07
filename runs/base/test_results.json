@@ -3,29 +3,29 @@
   "step": 4000,
   "decoding": "greedy",
   "test_clean": {
-    "samples": 200,
-    "SER": 0.023547880690737835,
-    "pitch_ER": 0.021036106750392466,
-    "duration_ER": 0.009733124018838305,
-    "sequence_acc": 0.72
+    "samples": 1000,
+    "SER": 0.028263632512255644,
+    "pitch_ER": 0.02511650426677964,
+    "duration_ER": 0.010409731888882164,
+    "sequence_acc": 0.674
   },
   "test_scan": {
-    "samples": 200,
-    "SER": 0.06875981161695448,
-    "pitch_ER": 0.05996860282574568,
-    "duration_ER": 0.026687598116169546,
-    "sequence_acc": 0.595
+    "samples": 1000,
+    "SER": 0.07298916661623192,
+    "pitch_ER": 0.06312413000060521,
+    "duration_ER": 0.028505719300369183,
+    "sequence_acc": 0.531
   },
   "top_confusions": [
-    "note-G#4_quarter. -> note-G4_quarter. (4)",
-    "note-A4_whole -> note-A4_half (4)",
-    "note-G#2_quarter. -> note-G2_quarter. (4)",
-    "note-E#2_sixteenth -> note-Eb2_sixteenth (3)",
-    "note-Gb5_sixteenth -> note-G5_sixteenth (2)",
-    "note-Gb3_quarter. -> note-G3_quarter. (2)",
-    "note-G#3_quarter. -> note-G3_quarter. (2)",
-    "note-Ab4_half -> note-A4_half. (2)",
-    "note-E#5_half -> note-Eb5_half (2)",
-    "note-Eb3_half. -> note-Eb3_half (2)"
+    "note-C#4_half. -> note-C4_half. (8)",
+    "note-E#2_sixteenth -> note-Eb2_sixteenth (7)",
+    "note-A#4_half -> note-A4_half. (6)",
+    "note-G#2_quarter. -> note-G2_quarter. (6)",
+    "note-Gb2_quarter -> note-G#2_quarter (6)",
+    "note-Cb3_eighth -> note-C#3_eighth (6)",
+    "note-Ab5_half -> note-A5_half (6)",
+    "note-C#2_eighth. -> note-C2_eighth. (5)",
+    "note-Gb3_sixteenth -> note-G3_sixteenth (5)",
+    "note-Eb4_eighth -> note-E#4_eighth (5)"
   ]
 }
