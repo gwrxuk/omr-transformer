@@ -105,7 +105,7 @@ and `<name>.mid`.
 - Next: fine-tune on Camera-PrIMuS (87k real incipits with photo distortion)
   and report SER on its official split; add beams and chords to the renderer;
   try a CTC head as a faster baseline; target the accidental errors above.
-- The checkpoint (`runs/base/best.pt`, about 100 MB) is not committed.
+- The checkpoint (`runs/base/best.pt`, 34 MB) is not committed.
 
 ## Layout
 
