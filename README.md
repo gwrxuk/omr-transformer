@@ -25,10 +25,6 @@ Details: synthetic pre-training below; real engravings and fine-tuning in
 [docs/openscore_test/](docs/openscore_test/README.md). A low-resolution scanned
 orchestral page still fails ([docs/real_score_test/](docs/real_score_test/README.md)).
 
-![synthetic examples](docs/examples.png)
-*Synthetic pre-training data: each clean render (odd rows) and the same staff
-after random scan degradation (even rows).*
-
 ## Synthetic pre-training results
 
 Trained 4,000 steps (batch 32, about 128k generated staves) on an Apple M4 GPU
@@ -84,7 +80,8 @@ signature, and about 8% carry an explicit accidental. `omr/render.py` engraves
 them (two clefs, seven keys, five time signatures, eight durations including
 dotted values, ledger lines, flags and rests), and `omr/augment.py` adds
 rotation, scaling, ink spread, blur, uneven lighting, noise and JPEG
-compression. Each sample is seeded by its split and index, so validation and
+compression. Examples of generated staves, clean and degraded:
+[docs/examples.png](docs/examples.png). Each sample is seeded by its split and index, so validation and
 test sets are fixed and runs are reproducible.
 
 ## Engineering notes
