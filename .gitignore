@@ -5,3 +5,9 @@ runs/smoke/
 data/
 out/
 .pytest_cache/
+
+# paper drafts are kept out of the repo
+*.docx
+*.tex
+paper/
+docs/omr_paper*
