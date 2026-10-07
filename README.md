@@ -2,14 +2,34 @@
 
 End-to-end optical music recognition in PyTorch: a single-staff image goes in;
 a sequence of music tokens, MusicXML and MIDI come out. The model is a CNN plus
-Transformer encoder-decoder trained from scratch, with greedy and beam decoding,
-symbol-level evaluation, and robustness testing against phone-scan style damage.
+Transformer encoder-decoder, pre-trained on generated staves and fine-tuned on
+real engravings from the CC0 OpenScore Lieder corpus.
 
-![examples](docs/examples.png)
-*Training data: each clean render (odd rows) and the same staff after random
-scan degradation (even rows).*
+![real engravings](docs/openscore_examples.png)
+*Real engravings from songs held out of training (OpenScore Lieder, CC0,
+engraved with MuseScore 4). The fine-tuned model transcribes the first three
+exactly; the last is the worst of 37 held-out excerpts, where a flat written
+once holds for the rest of the measure and the model reads the unmarked
+repetitions as naturals.*
 
-## Results
+## Results at a glance
+
+| Test set | Synthetic-only model | Fine-tuned on real engravings |
+|---|---|---|
+| **Real engravings**, 37 excerpts from held-out OpenScore songs | 73.6% SER, 0% exact | **1.9% SER, 75.7% exact** |
+| Synthetic clean, 1,000 staves | 2.8% | 1.8% |
+| Synthetic scan-degraded, 1,000 staves | 7.3% | 5.2% |
+
+Details: synthetic pre-training below; real engravings and fine-tuning in
+[Real engravings (OpenScore Lieder)](#real-engravings-openscore-lieder) and
+[docs/openscore_test/](docs/openscore_test/README.md). A low-resolution scanned
+orchestral page still fails ([docs/real_score_test/](docs/real_score_test/README.md)).
+
+![synthetic examples](docs/examples.png)
+*Synthetic pre-training data: each clean render (odd rows) and the same staff
+after random scan degradation (even rows).*
+
+## Synthetic pre-training results
 
 Trained 4,000 steps (batch 32, about 128k generated staves) on an Apple M4 GPU
 in 78 minutes. Test sets are 1,000 staves each from a seed range never used in
