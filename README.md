@@ -143,6 +143,61 @@ clefs as treble, invents key signatures, cannot express 5/4, and turns beamed
 triplets into unrelated durations. Details, crops, raw predictions and source:
 [docs/real_score_test/](docs/real_score_test/README.md).
 
+## Writing new music from the corpus
+
+The same token vocabulary also works for generation. `omr/melody.py` is a
+small decoder-only Transformer (3.5M parameters, 4 layers, d=256) trained on
+the vocal lines of the OpenScore Lieder songs, so its output can be exported,
+engraved and read back by the OMR model.
+
+- **Data** (`scripts/build_melody_corpus.py`): 2,502 phrases from 827 songs
+  that the vocabulary can express (no ties, tuplets or chords). The split is
+  by song, the same as the OMR data: 2,294 training phrases (764 songs), 103
+  validation and 105 test. Training phrases are transposed into each of the
+  7 vocabulary keys when every pitch stays in range (786k tokens).
+- **Model fit** (held-out test songs, perplexity per token, lower is better):
+
+  | Model | Test perplexity |
+  |---|---|
+  | Unigram (add-one) | 57.4 |
+  | Bigram (add-0.01) | 22.4 |
+  | Melody Transformer (best step 5,500 of 6,000) | **11.0** |
+
+- **Sampling** (`scripts/compose.py`): nucleus sampling (T=0.9, p=0.92) with
+  a mask that only allows durations fitting the time left in the bar, forces
+  the barline when the bar is full, and requires at least one note per bar.
+  For each piece, 128 samples are drawn. A sample is kept only if it ends
+  on the tonic with a note of a quarter or longer, stays within 15 semitones,
+  and shares no run longer than 8 notes with any training phrase (compared
+  as interval + duration, so a transposed copy still counts). The kept
+  sample with the highest mean log-probability is used.
+
+| # | Start | Passed filters | Longest run shared with training | OMR read-back SER |
+|---|---|---|---|---|
+| 1 | F major, 3/4, from scratch | 7 / 128 | 6 notes | 0.0% |
+| 2 | G major, 6/8, from scratch | 6 / 128 | 6 notes | 0.0% |
+| 3 | E♭ major, 4/4, from scratch | 5 / 128 | 5 notes | 1.9% |
+| 4 | First 2 bars of Harriet Abrams, *Crazy Jane* (test song) | 2 / 128 | 6 notes | 2.0% |
+| 5 | First 2 bars of Brahms, *Der Schmied*, Op. 19 No. 4 (test song) | 10 / 128 | 7 notes | 0.0% |
+
+Melody 4, continuing the opening of a song the model never saw in training
+(bars 1-2 are Abrams; bars 3-16 are generated):
+
+![Generated melody 4](docs/new_music/melody_4_preview.png)
+
+Each piece is in [docs/new_music/](docs/new_music/) as MusicXML, MIDI, PDF,
+PNG and MP3 (MuseScore 4 rendering), with every check in `report.json`.
+Reading the engravings back with the fine-tuned OMR model (2-bar windows,
+40 in total) gives SER 0.85% and 37/40 windows exact. Two errors drop the
+second of two repeated quarter notes. The third reads two C♯ eighths as C,
+because the sharp is written once and carries through the bar: the same
+accidental-carry error seen on the OpenScore test set.
+
+These are monophonic melodies without words or accompaniment. The filters
+and the copy check catch obvious copying, but they do not judge musical
+quality. A short shared run (5-7 notes) is common in tonal melody and is
+reported per piece, with the training song it matches.
+
 ## Limits and next steps
 
 - The training images are synthetic and engraved by a simple renderer: one
@@ -167,5 +222,10 @@ omr/evaluate.py   test-set metrics and confusion analysis
 omr/predict.py    image -> tokens / MusicXML / MIDI
 omr/export.py     MusicXML and MIDI writers
 omr/metrics.py    SER, pitch and duration error rates
-tests/            57 tests
+omr/melody.py     melody language model and bar-constrained sampling
+scripts/fetch_openscore.py      download + convert the OpenScore Lieder corpus
+scripts/build_melody_corpus.py  vocal-line phrases for the melody model
+scripts/train_melody_lm.py      train the melody model
+scripts/compose.py              compose, copy-check, engrave, OMR read-back
+tests/            63 tests
 ```
